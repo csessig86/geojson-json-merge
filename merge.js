@@ -4,10 +4,10 @@ for (var num = 0; num < iowa_counties.features.length; num ++) {
 	for (var num_two = 0; num_two < census_data.length; num_two ++) {
 
 		// Match files based on property
-		if (iowa_counties.features[num].properties["NAMELSAD10"] === census_data[num_two]["name"] ) {
+		if (iowa_counties.features[num].properties['NAMELSAD10'] === census_data[num_two]['name'] ) {
 
 		// Fields we want to merge from JSON file into GeoJSON file
-		var census_fields = ['population', 'population_poverty', 'unemployment', 'median_age', 'male', 'male_percent', 'female', 'female_percent', 'median_household_income', 'poverty', 'poverty_percent', 'white', 'white_percent', 'black', 'black_percent', 'asian', 'asian_percent'];
+		var census_fields = ['population', 'unemployment', 'median_age', 'median_household_income', 'poverty_percent', 'white_percent', 'black_percent', 'asian_percent', 'indian_percent', 'other_percent', 'tworaces_percent', '12th_under_percent', 'high_school_ged_some_college_percent', 'college_percent', 'agriculture_percent', 'manufacturing_percent', 'finance_real_estate_rental_percent', 'education_health_care_social_assistance_percent', 'retail_percent', 'construction_percent', 'arts_entertainment_recreation_food_services_percent'];
 
 			// Loop through fields
 			for (var num_three = 0; num_three < census_fields.length; num_three ++) {
@@ -19,4 +19,4 @@ for (var num = 0; num < iowa_counties.features.length; num ++) {
 }
 
 // Show on console
-console.log(JSON.stringify(iowa_counties, null, 4))
+console.log(JSON.stringify(iowa_counties))
